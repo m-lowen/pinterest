@@ -3,8 +3,11 @@
     <div class="item_body">
       <%= item.body %>
     </div>
+    <%= image_tag item.photo.url(:medium) %> 
     <div class="item_timestamp">
       <%= time_ago_in_words(item.created_at) %> ago
     </div>
+	<br/>
+	<br/>
   </td>
 </tr>

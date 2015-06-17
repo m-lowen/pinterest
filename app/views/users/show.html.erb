@@ -1,20 +1,21 @@
 <div class="pinterest_profile">
   <table>
     <tr>
-      <td class="photo">
-        <%= image_tag @user.avatar.url(:thumb), :class => 'avatar' %>
-      </td>
     </tr>
     <tr>
      <td>
-        <div class="pinterest_handle"><%= @user.handle %></div>
+        <div class="pinterest_handle"> <b> <%= @user.name %> : </b></div>
       </td>
     </tr>
   </table>
 </div>
 
+
+<ol>
 <table class="items_list">
 <% @items.each do |item| %>
-  <%= render partial: "item", locals: {item: item} %>
+ <%= render partial: "item", locals: {item: item} %> 
 <% end %>
+</ol>
+
 </table>

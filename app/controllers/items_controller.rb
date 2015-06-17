@@ -19,10 +19,15 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+    
+  end
+
+
   private
 
     def item_params
-      params["item"].permit(:body).merge(:user => current_user)
+      params["item"].permit(:body, :photo).merge(:user => current_user)
     end
 
     def load_new_item

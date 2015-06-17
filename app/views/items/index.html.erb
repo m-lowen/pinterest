@@ -9,5 +9,7 @@
 <ul>
 <% @items.each do |item| %>
   <li><%= link_to(item.user.handle, "/users/#{item.user.id}") %>: <%= item.body %></li>
+		<%= image_tag item.photo.url(:medium) %>
+
 <% end %>
 </ol>
